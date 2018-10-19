@@ -1,6 +1,6 @@
 # jdk-docker-ansible
 
-JDK8 and ansible(python3) in an image for use in gitlab e.g.
+JDK8 and ansible(python3) and npm in an image for use in gitlab e.g.
 
 ## Requirements
 
