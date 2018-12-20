@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y software-properties-common &&  \
     apt-get install -y git libgtk2.0-0 libcanberra-gtk-module curl mc python3-pip locales
 
 RUN curl -L https://download.docker.com/linux/static/stable/x86_64/docker-18.06.1-ce.tgz | tar -xz -C /tmp && mv /tmp/docker/* /usr/bin && rm -rf /tmp/docker
-RUN pip3 install git+https://github.com/ansible/ansible.git@v2.5.9
+RUN pip3 install git+https://github.com/ansible/ansible.git@v2.7.4
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
