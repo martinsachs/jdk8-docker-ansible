@@ -70,6 +70,12 @@ RUN set -ex \
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*  
+    
+# fix jenkins & docker uid fuckup
+ARG DOCKER_GROUP=docker
+RUN if [[ $(grep -c :${DOCKER_GROUP}: /etc/group) == "0" ]]; then \
+    addgroup -g ${DOCKER_GROUP} docker; fi
+RUN adduser --disabled-login -u 10000 --group $(grep ":${DOCKER_GROUP}:" /etc/group | grep -Eo "^\w+") jenkins    
   
 RUN locale-gen en_US.UTF-8
 

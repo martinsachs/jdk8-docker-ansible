@@ -1,6 +1,6 @@
 # jdk-docker-ansible
 
-JDK8 and ansible(python3) and npm in an image for use in gitlab e.g.
+JDK8 and ansible(python3) and npm in an image for use in jenkins or gitlab e.g.
 
 ## Requirements
 
@@ -8,4 +8,4 @@ JDK8 and ansible(python3) and npm in an image for use in gitlab e.g.
 
 ## Usage
 
-include this as baseimage for gitlab ci pipelines
+include this as baseimage for ci pipelines

@@ -1,2 +1,2 @@
 echo 'This will take a lot of time...'
-docker build -t martinsachs/jdk8-docker-ansible:1.0.2 .
+docker build -t martinsachs/jdk8-docker-ansible:1.0.5 .
